@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal introduction and interactive map for Yulin Bai.">
+  <title>Yulin Bai | SSCI 591</title>
+
+  <!-- Leaflet styles are required to keep map tiles inside the map box. -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <p class="eyebrow">SSCI 591 · Web &amp; Mobile GIS</p>
+    <h1>Yulin Bai</h1>
+    <p class="tagline">M.S. Student in Geographic Information Science and Technology at USC</p>
+  </header>
+
+  <main>
+    <section class="page-purpose" aria-labelledby="purpose-heading">
+      <p class="eyebrow">For SSCI 591 classmates and potential collaborators</p>
+      <h2 id="purpose-heading">A Geospatial Profile</h2>
+      <p>This page introduces my background, interests, and geospatial toolkit. It is intended to help classmates and potential collaborators learn about the areas where we may share interests, exchange ideas, or work together.</p>
+    </section>
+
+    <section class="profile" aria-labelledby="about-heading">
+      <img class="portrait" src="photo.jpg" alt="Portrait of Yulin Bai">
+      <div>
+        <h2 id="about-heading">About Me</h2>
+        <p>Hello everyone! My name is Yulin Bai, and I am currently pursuing a Master of Science in Geographic Information Science and Technology at USC. I previously earned my bachelor's degree in Measurement and Control Technology and Instruments, which gave me a foundation in engineering, programming, sensors, and data analysis.</p>
+        <p>During my graduate studies at USC, I have gained experience with GIS, spatial analysis, and geospatial programming. I have worked with ArcGIS Pro, ArcGIS Online, Python, and ArcPy on different projects. I also have experience with remote sensing and geospatial data through an internship involving remote sensing, GIS applications, and AI-based tools.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="interests-heading">
+      <h2 id="interests-heading">Interests and Goals</h2>
+      <p>I am especially interested in the combination of GIS, remote sensing, artificial intelligence, and programming. I hope to explore how satellite and aerial imagery can be processed, analyzed, and integrated with other spatial data for environmental monitoring, urban analysis, autonomous driving, and smart cities.</p>
+      <p>Through this course, I hope to strengthen my understanding of remote sensing methods and gain more practical experience with image processing and interpretation. I also look forward to learning how people from different backgrounds apply remote sensing to real-world problems.</p>
+      <ul class="skills-list" aria-label="Yulin's areas of interest">
+        <li>GIS &amp; spatial analysis</li>
+        <li>Remote sensing</li>
+        <li>AI &amp; geospatial programming</li>
+        <li>Environmental and urban applications</li>
+      </ul>
+    </section>
+
+    <section class="toolkit-section" aria-labelledby="toolkit-heading">
+      <p class="eyebrow">Skills and tools</p>
+      <h2 id="toolkit-heading">My Geospatial Toolkit</h2>
+      <p>This table summarizes tools that I have used in coursework, projects, and internship work.</p>
+      <div class="table-wrapper">
+        <table>
+          <caption>Geospatial tools and the work I use them for</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tool</th>
+              <th scope="col">Area</th>
+              <th scope="col">How I use it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ArcGIS Pro</td>
+              <td>GIS and spatial analysis</td>
+              <td>Mapping, geoprocessing, and spatial analysis workflows.</td>
+            </tr>
+            <tr>
+              <td>ArcGIS Online</td>
+              <td>Web GIS</td>
+              <td>Sharing spatial data and exploring web-based GIS applications.</td>
+            </tr>
+            <tr>
+              <td>Python and ArcPy</td>
+              <td>Geospatial programming</td>
+              <td>Automating repeatable GIS tasks and analyzing spatial data.</td>
+            </tr>
+            <tr>
+              <td>Remote sensing</td>
+              <td>Earth observation</td>
+              <td>Working with imagery and geospatial data in internship projects.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="map-section" aria-labelledby="map-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Places that matter to me</p>
+          <h2 id="map-heading">From USC to Beijing</h2>
+        </div>
+        <a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">OpenStreetMap ↗</a>
+      </div>
+
+      <div id="map" role="region" aria-label="Interactive map showing USC and Beijing"></div>
+
+      <div class="map-controls" aria-label="Map controls">
+        <button id="home-button" type="button">Take me home</button>
+        <button id="usc-button" class="secondary-button" type="button">Back to USC</button>
+        <p id="status" role="status">The map is centered on USC. Choose a location to explore.</p>
+      </div>
+    </section>
+
+    <section class="question-section" aria-labelledby="question-heading">
+      <p class="eyebrow">Discussion starter</p>
+      <h2 id="question-heading">A Question for My Classmates</h2>
+      <p>Click the button to reveal a discussion question about shared geospatial interests.</p>
+      <button id="question-button" type="button">Show the question</button>
+      <p id="classmate-question" class="question-output" role="status" aria-live="polite">The question will appear here.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by Yulin Bai for SSCI 591 · Fall 2026</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
