@@ -107,6 +107,10 @@ p {
   margin: 0 0 17px;
 }
 
+img {
+  max-width: 100%;
+}
+
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -125,6 +129,119 @@ p {
   font-family: Arial, sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
+}
+
+.beijing-section h2,
+.resources-section h2 {
+  margin-bottom: 10px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.place-card {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(64, 37, 29, 0.08);
+}
+
+.place-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.place-card figcaption {
+  display: grid;
+  gap: 5px;
+  padding: 16px;
+}
+
+.place-card figcaption strong {
+  color: var(--usc-cardinal);
+  font-family: Arial, sans-serif;
+  font-size: 1.02rem;
+}
+
+.place-card figcaption span,
+.place-card figcaption small {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.place-card figcaption small {
+  margin-top: 4px;
+}
+
+.place-card figcaption small a {
+  font-size: inherit;
+}
+
+.resources-section {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff7e6;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.resource-card {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+  padding: 18px;
+  border: 1px solid #ddcfc6;
+  border-radius: 12px;
+  color: var(--ink);
+  background: #ffffff;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.resource-card:hover,
+.resource-card:focus-visible {
+  color: var(--ink);
+  box-shadow: 0 8px 18px rgba(64, 37, 29, 0.12);
+  transform: translateY(-2px);
+}
+
+.resource-card strong {
+  color: var(--usc-cardinal);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.resource-card > span:last-child {
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.resource-kicker {
+  color: var(--usc-cardinal);
+  font-family: Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .toolkit-section h2,
@@ -409,6 +526,15 @@ footer p {
 
   .question-section {
     padding: 21px;
+  }
+
+  .resources-section {
+    padding: 21px;
+  }
+
+  .photo-grid,
+  .resource-grid {
+    grid-template-columns: 1fr;
   }
 
   caption,

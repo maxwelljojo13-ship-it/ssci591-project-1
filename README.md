@@ -15,6 +15,15 @@ For local testing, open the project in VS Code and use Live Server. The internet
 - Interactive Leaflet map with USC and Beijing markers
 - An additional JavaScript question interaction with a string output, named function, and click event listener
 - Functional use of the Leaflet JavaScript library
+- A Beijing landscape gallery with on-page image attribution and licenses
+- External resource links related to Beijing, satellite imagery, and USC Spatial Sciences
+
+## Media and resource credits
+
+- Summer Palace, Beijing, China — Brian Jeffery Beggerly, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Summer_Palace,_Beijing,_China.jpg), [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
+- Great Wall of China at Mutianyu near Beijing — Velatrix, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Great_Wall_of_China_July_2006.JPG), [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+- [Beijing International Portal](https://english.beijing.gov.cn/), [NASA Worldview](https://worldview.earthdata.nasa.gov/), and the [USC Spatial Sciences Institute](https://dornsife.usc.edu/spatial/home/) are linked as external learning resources.
+- The interactive map uses [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/) map tiles and attribution.
 
 ## Publish with GitHub Pages
 
