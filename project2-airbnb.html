@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Los Angeles Airbnb listings by room type, price, guest reviews, calendar availability and proximity to tourism attractions.">
+  <title>Los Angeles Airbnb Explorer | Yulin Bai</title>
+  <style>
+    :root{color-scheme:light;--ink:#162d3b;--muted:#536875;--paper:#f5f7f7;--line:#d6e0e2;--accent:#176b73}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:#075e72;text-underline-offset:3px} a:hover{color:#003d4b} a:focus-visible,summary:focus-visible{outline:3px solid #c87522;outline-offset:4px}
+    .skip{position:absolute;left:12px;top:-60px;background:white;padding:10px;z-index:20}.skip:focus{top:10px}
+    nav,.wrap{max-width:1440px;margin:auto;padding-left:32px;padding-right:32px} nav{display:flex;justify-content:space-between;gap:20px;padding-top:18px;padding-bottom:18px;border-bottom:1px solid var(--line);font-size:14px}
+    header{padding:46px 0 30px}.eyebrow{font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:12px;color:var(--accent)}
+    h1{font-size:clamp(32px,4vw,54px);line-height:1.12;letter-spacing:-.035em;margin:12px 0 20px;font-weight:750} h2{font-size:24px;line-height:1.3;margin:0 0 12px} h3{font-size:18px;margin:0 0 8px}
+    .intro{max-width:920px;font-size:19px;color:var(--muted);margin:0}.metrics{display:flex;flex-wrap:wrap;gap:24px 54px;margin-top:28px}.metric strong{font-size:27px;display:block;line-height:1.2}.metric span{color:var(--muted);font-size:13px}
+    .maphead{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 24px;background:#fff;border:1px solid var(--line);border-bottom:0}.maphead h2{font-size:20px;margin:0}.maphead a{font-size:14px;font-weight:600}
+    iframe{display:block;width:100%;height:820px;border:1px solid var(--line);background:#fff}.guide{background:#fff;border:1px solid var(--line);border-top:0;padding:20px 24px}.guide p{margin:0 0 8px}.guide p:last-child{margin-bottom:0}.guide strong{color:#123b47}
+    .sections{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;margin:46px 0}.sections p{margin:0 0 16px}table{width:100%;border-collapse:collapse;font-size:14px;margin:18px 0}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}th{background:#e8eff0}td:last-child,th:last-child{text-align:right}.small{font-size:13px;color:var(--muted)}
+    details{border-top:1px solid var(--line);padding:20px 0}summary{cursor:pointer;font-weight:700}details p,details ul{max-width:1050px}.links{display:flex;flex-wrap:wrap;gap:10px 26px}footer{border-top:1px solid var(--line);margin-top:32px;padding:24px 0 36px;font-size:13px;color:var(--muted)}
+    @media(max-width:720px){nav,.wrap{padding-left:18px;padding-right:18px}header{padding-top:28px}.intro{font-size:17px}.metrics{gap:18px 30px}.sections{grid-template-columns:1fr;gap:24px;margin-top:30px}.maphead{align-items:flex-start;padding:16px;flex-direction:column;gap:8px}iframe{height:860px}.guide{padding:16px}th,td{padding:8px 5px}}
+    @media print{iframe{height:500px}.skip,nav{display:none}details{display:block}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#explore">Skip to interactive map</a>
+  <nav aria-label="Project navigation"><a href="./index.html">Yulin Bai · Geospatial portfolio</a><span>SSCI 591 · Project 2</span></nav>
+  <main class="wrap">
+    <header>
+      <div class="eyebrow">California study · Los Angeles region</div>
+      <h1>Los Angeles Airbnb Explorer</h1>
+      <p class="intro">Compare places to stay through room types, nightly prices, guest reviews and nearby tourism attractions. This interactive map supports exploratory research for prospective hosts and travelers across the Los Angeles region.</p>
+      <div class="metrics" aria-label="Dataset summary">
+        <div class="metric"><strong>43,751</strong><span>Airbnb listings · 15 June 2026</span></div>
+        <div class="metric"><strong>1,128</strong><span>Named OSM attractions · 2 October 2026 PT</span></div>
+        <div class="metric"><strong>$223.67</strong><span>Median nightly price · 38,186 priced listings</span></div>
+      </div>
+    </header>
+    <section id="explore" aria-label="Interactive Airbnb explorer">
+      <div class="maphead"><h2>Explore listings and attractions</h2><a href="https://experience.arcgis.com/experience/58418c59eaeb48f9a66fcbedbfca5048/" target="_blank" rel="noopener">Open full-screen application ↗</a></div>
+      <iframe title="Los Angeles Airbnb Explorer built with ArcGIS Experience Builder" src="https://experience.arcgis.com/experience/58418c59eaeb48f9a66fcbedbfca5048/" allowfullscreen loading="eager"></iframe>
+      <div class="guide">
+        <p><strong>Start exploring:</strong> choose a room type, switch on the price filter and enter a minimum and maximum. Active filters work together. Scroll the filter panel for availability, ratings and recent reviews. Use “Reset all filters” to restore defaults.</p>
+        <p><strong>Read the map:</strong> click a listing to see its nearest named attraction, approximate distance and attraction count within 3 km. Use Map Layers and Legend in the upper-right controls. Expand the bottom table to browse and sort the filtered records.</p>
+        <p><strong>Interpret carefully:</strong> available nights describe the calendar at the snapshot date, not actual occupancy. Reviews indicate review activity, not bookings. Missing price or rating values are preserved and excluded only when the relevant numeric filter is active.</p>
+      </div>
+    </section>
+    <div class="sections">
+      <section aria-labelledby="questions"><h2 id="questions">Questions the map can answer</h2>
+        <p><strong>For travelers:</strong> which room types fit a budget near named attractions? How do guest ratings, recent reviews and minimum-stay requirements compare?</p>
+        <p><strong>For prospective hosts:</strong> where are similar listings concentrated, and how do their advertised prices and review activity differ? These are descriptive comparisons; the map does not estimate profitability or verify permission to operate.</p>
+        <p><strong>For research:</strong> how are advertised price, room type and attraction proximity associated? The data do not contain guest incomes, so they cannot establish the preferences of income groups.</p>
+      </section>
+      <section aria-labelledby="snapshot"><h2 id="snapshot">A snapshot of the market</h2>
+        <table><caption class="small">Full dataset before interactive filters</caption><thead><tr><th scope="col">Room type</th><th scope="col">Listings</th><th scope="col">Median price</th></tr></thead><tbody>
+          <tr><td>Entire home or apartment</td><td>32,454</td><td>$282.00</td></tr>
+          <tr><td>Private room</td><td>10,590</td><td>$85.37</td></tr>
+          <tr><td>Shared room</td><td>292</td><td>$36.82</td></tr>
+          <tr><td>Hotel room</td><td>415</td><td>$319.19</td></tr>
+        </tbody></table><p class="small">Medians exclude missing prices. Advertised prices are in USD and are not a trip quote including taxes and fees. These figures do not update with the embedded map filters.</p>
+      </section>
+    </div>
+    <details open><summary>Data and measurement limits</summary>
+      <p>The Airbnb dataset is the Inside Airbnb Los Angeles snapshot from 15 June 2026. Its coverage extends beyond the City of Los Angeles, including coastal and northern county communities and Catalina Island. The project is a Los Angeles regional case study, not a complete statewide inventory.</p>
+      <p>OpenStreetMap features were retrieved on 2 October 2026 Pacific Time for named attractions, museums, galleries, viewpoints, zoos and theme parks. Distances are straight-line approximations using WGS84 coordinates; listing positions are anonymized and some attraction positions are polygon centers. They are not walking or driving routes. Coverage and tagging are uneven, and the two sources have different snapshot dates.</p>
+      <p>There are 5,565 listings without a nightly price and 11,257 without a guest rating. No values were invented to fill these gaps. Calendar unavailability may reflect reservations or host blocking. Guest income, actual occupied nights and actual revenue are not observed.</p>
+    </details>
+    <details><summary>Sources and public GIS items</summary>
+      <p>Airbnb data: <a href="https://insideairbnb.com/get-the-data/">Inside Airbnb</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. See the <a href="https://insideairbnb.com/data-assumptions/">data assumptions</a>. Tourism features: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, available under the Open Database License. Basemap attribution is displayed inside the map.</p>
+      <div class="links"><a href="https://www.arcgis.com/home/item.html?id=82b21a224a164c1da01c38d8b059b8b8">Published Airbnb layer</a><a href="https://www.arcgis.com/home/item.html?id=d019144c06f14d3da8e63b1299a8eb0b">Published attraction layer</a><a href="https://www.arcgis.com/home/item.html?id=bcb34b662ad74996b952a48315cd7fce">Public Web Map</a><a href="https://github.com/maxwelljojo13-ship-it/ssci591-project-1/blob/main/project2-airbnb.html">HTML source</a></div>
+    </details>
+    <footer>Yulin Bai · University of Southern California · SSCI 591 Project 2 · October 2026<br>Created with ArcGIS Online and ArcGIS Experience Builder.</footer>
+  </main>
+</body>
+</html>
